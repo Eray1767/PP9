@@ -163,19 +163,32 @@ graph TD
   B --> C{Condition}
   ...
 ```
-graph TD
-  A[Start: x] --> B[Initialize result = 1]
-  B --> C{i = 1 to x?}
-  C -- Yes --> D[Return result]
-  C -- No --> E{i % 2 == 0?}
-  E -- Yes --> F[result += i]
-  E -- No --> G[result *= i]
-  F --> H[result > 1000?]
-  G --> H
-  H -- Yes --> I[result -= 100]
-  H -- No --> J[Increment i]
-  I --> J
-  J --> C
+# Flowchart: transform_complex(int x)
+
+```mermaid
+flowchart TD
+
+    A([Start]) --> B[Set result = 1]
+    B --> C[i = 1]
+
+    C --> D{Is i <= x?}
+    D -- No --> Z([Return result])
+    D -- Yes --> E{Is i even?}
+
+    E -- Yes --> F[result = result + i]
+    E -- No --> G[result = result * i]
+
+    F --> H{result > 1000?}
+    G --> H
+
+    H -- Yes --> I[result = result - 100]
+    H -- No --> J[No change]
+
+    I --> K[i = i + 1]
+    J --> K
+
+    K --> C
+
 
 
 ---
