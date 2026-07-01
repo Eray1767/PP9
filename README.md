@@ -116,7 +116,7 @@ gcc -c solutions/flowchart_impl solutions/flowchart_impl.c
 Reflection:
 
 * **Explain how each flowchart node maps to your C code.**
-
+Der Startknoten wird durch das Anlegen der Variablen umgesetzt, der „Initialize result = 1“-Knoten entspricht der Initialisierung von result, die Schleife über i = 1 bis x wird als for‑Schleife implementiert, der Entscheidungs‑Knoten („i even?“) wird durch eine if‑Abfrage (i % 2 == 0) realisiert, die beiden Aktionen („add“ oder „multiply“) sind die jeweiligen Rechenoperationen im Code, die Prüfung „result > 1000“ ist ein weiterer if‑Zweig, und der Endknoten entspricht dem abschließenden printf, der das Ergebnis ausgibt.
 ---
 
 ### Task 3: Code-to-Flowchart
@@ -163,6 +163,28 @@ graph TD
   B --> C{Condition}
   ...
 ```
+flowchart TD
+
+    A([Start]) --> B[Set result = 1]
+    B --> C[i = 1]
+
+    C --> D{Is i <= x?}
+    D -- No --> Z([Return result])
+    D -- Yes --> E{Is i even?}
+
+    E -- Yes --> F[result = result + i]
+    E -- No --> G[result = result * i]
+
+    F --> H{result > 1000?}
+    G --> H
+
+    H -- Yes --> I[result = result - 100]
+    H -- No --> J[No change]
+
+    I --> K[i = i + 1]
+    J --> K
+
+    K --> C
 
 ---
 
