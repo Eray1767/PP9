@@ -163,7 +163,7 @@ graph TD
   B --> C{Condition}
   ...
 ```
-# Flowchart: transform_complex(int x)
+## Flowchart: transform_complex(int x)
 
 ```mermaid
 flowchart TD
@@ -189,8 +189,43 @@ flowchart TD
 
     K --> C
 
-
+---
 
 ---
+
+## **Flowchart 2 – evaluate_sequence(int *arr, int len)**
+
+```markdown
+## Flowchart: evaluate_sequence(int *arr, int len)
+
+```mermaid
+flowchart TD
+
+    A([Start]) --> B[Set state = 0]
+    B --> C[i = 0]
+
+    C --> D{Is i < len?}
+    D -- No --> M[Go to switch(state)]
+    D -- Yes --> E{arr[i] < 0?}
+
+    E -- Yes --> F[state = -1]
+    E -- No --> G{arr[i] == 0?}
+
+    G -- Yes --> H[state = 0]
+    G -- No --> I[state = 1]
+
+    F --> J{state == 1?}
+    H --> J
+    I --> J
+
+    J -- Yes --> M
+    J -- No --> K[i = i + 1]
+
+    K --> C
+
+    M --> N{state == 1?}
+    N -- Yes --> O([return true])
+    N -- No --> P([return false])
+
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
