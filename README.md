@@ -197,10 +197,10 @@ flowchart TD
 
     C --> D{Is i < len?}
     D -- No --> M[Go to switch state]
-    D -- Yes --> E{arr[i] < 0?}
+    D -- Yes --> E{arr_i < 0?}
 
-    state = minus1
-    E -- No --> G{arr[i] == 0?}
+    E -- Yes --> F[state = neg1]
+    E -- No --> G{arr_i == 0?}
 
     G -- Yes --> H[state = 0]
     G -- No --> I[state = 1]
@@ -217,6 +217,7 @@ flowchart TD
     M --> N{state == 1?}
     N -- Yes --> O([return true])
     N -- No --> P([return false])
+
 
 ````
 
