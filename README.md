@@ -199,7 +199,7 @@ flowchart TD
     D -- No --> M[Go to switch state]
     D -- Yes --> E{arr[i] < 0?}
 
-    E -- Yes --> F[state = -1]
+    state = minus1
     E -- No --> G{arr[i] == 0?}
 
     G -- Yes --> H[state = 0]
