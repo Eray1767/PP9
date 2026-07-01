@@ -188,7 +188,7 @@ flowchart TD
     J --> K
 
     K --> C
-
+````
 ---
 
 ---
@@ -226,6 +226,7 @@ flowchart TD
     M --> N{state == 1?}
     N -- Yes --> O([return true])
     N -- No --> P([return false])
+````
 
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
