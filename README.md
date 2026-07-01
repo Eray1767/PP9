@@ -196,7 +196,7 @@ flowchart TD
     B --> C[i = 0]
 
     C --> D{Is i < len?}
-    D -- No --> M[Go to switch(state)]
+    D -- No --> M[Go to switch state]
     D -- Yes --> E{arr[i] < 0?}
 
     E -- Yes --> F[state = -1]
