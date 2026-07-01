@@ -189,6 +189,7 @@ flowchart TD
 
     K --> C
 ````
+```mermaid
 flowchart TD
 
     A([Start]) --> B[Set state = 0]
