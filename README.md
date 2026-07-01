@@ -163,7 +163,7 @@ graph TD
   B --> C{Condition}
   ...
 ```
-## **Flowchart 1 – transform_complex(int x)**
+## **1**
 
 ```mermaid
 flowchart TD
@@ -189,6 +189,7 @@ flowchart TD
 
     K --> C
 ````
+## **2**
 ```mermaid
 flowchart TD
 
